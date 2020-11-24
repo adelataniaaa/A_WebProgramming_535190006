@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Another Example</title>
+    </head>
+    <body>
+        <p>Please rate :</p>
+        <p>
+            <!-- namenya sama jadi hanya dapat milih satu, kalau namenya berbeda jdnya bisa milih semuanya-->
+            <input type="radio" name="rate" value="Very Poor">Very Poor
+            <input type="radio" name="rate" value="Poor">Poor
+            <input type="radio" name="rate" value="OK">OK
+            <input type="radio" name="rate" value="Good">Good
+            <input type="radio" name="rate" value="Very Good">Very Good
+        </p>
+        <button id="btnRate" onclick="">Submit</button>
+
+        <script>
+            var btn = document.getElementById("btnRate")
+
+            /* btn.addEventListener("click", function () {
+                var rates = document.getElementsByName("rate") //array of input type "radio"
+                for (var i=0;i<rates.length;i++) {
+                    if (rates[i].checked) {
+                        alert('You rated : ' + rates[i].value + ' Thank you for your ' + rates[i].value + ' rating.')
+                    }
+                }
+            }) */
+
+            btn.addEventListener("click", () => {
+                var rates = document.getElementsByName("rate") //array of input type 'radio'
+                rates.forEach(rate) => {
+                    if(rate.checked) {
+                        alert(`You rated : ${rate.value} Thank you for your ${rate.value} rating.`)
+                    }
+                }
+            })
+
+        </script>
+    </body>
+</html>

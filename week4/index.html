@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Javascript</title>
+</head>
+<body>
+    <!--<button onclick="alert('Hello, World!')">Click Me!</button>-->
+    <button onclick="showContent()">Click Me!</button>
+    <p id="content">This is the initial content.</p>
+
+    <script>
+        /*function showContent() {
+            document.getElementById("content").innerHTML = "<b>" + Date() + "</b>";
+        }*/
+        function showContent(num) {
+            var x = 3;
+            var res = num + x;
+
+            var p = document.getElementById("content");
+            p.innerHTML = res;
+        }
+    </script>
+</body>
+</html>

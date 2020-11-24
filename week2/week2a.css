@@ -1,0 +1,33 @@
+body{
+    background-color: lavender;
+}
+
+h1{
+    color:blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+}
+
+/* class selector (dapat digunakan berkali-kali)*/
+.news {
+    color:red; 
+}
+
+.ads {
+    color:yellow;
+}
+
+.breaking {
+    color:green;
+}
+
+/* id selector (unik, hanya dapat digunakan 1x dlm halaman html*/
+#footer {
+    color: coral;
+    border: 1px solid black;
+}
+
+div > p {
+    color:white;
+    background-color: black;
+}
