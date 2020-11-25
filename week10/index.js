@@ -22,6 +22,19 @@ app.set('layout', 'layouts/main.ejs');
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
+//connect to mongodb
+const mongoose = require ('mongoose')
+mongoose.connect(
+    'mongodb+srv://adelataniaaa:kelompok4@cluster0.w0g5p.mongodb.net/test?retryWrites=true&w=majority',
+    {userNewUrlParser: true, useUnifiedTopology: true}
+);
+
+//check connection
+const db = mongoose.connection;
+db.once('open', () => {
+    console.log('Successfully connected to MongoDB using Mongoose!');
+});
+
 //routes
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');

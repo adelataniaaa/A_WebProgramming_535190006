@@ -28,9 +28,9 @@
         <% tasks.forEach((task, index) => { %>
             <tr>
                 <td> <%= index + 1 %></td>
-                <td> <%= task %></td>
+                <td> <%= task.name %></td>
                 <td>
-                    <form action="/todo/done/<%= index %>" method="post">
+                    <form action="/todo/done/<%= task._id %>" method="post">
                         <button type="submit" class="btn btn-outline-success btn-sm">
                             <i data-feather="check"></i>
                             Done
